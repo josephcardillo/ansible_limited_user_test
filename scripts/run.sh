@@ -5,7 +5,7 @@ set -e
 # readonly VARS_PATH="./group_vars/limiteduser/vars"
 
 function ansible:build {
-  ssh_key
+  # ssh_key
   # write vars file
   #sed 's/  //g' <<EOF > ${VARS_PATH}
   # linode vars
