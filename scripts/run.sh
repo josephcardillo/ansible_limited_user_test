@@ -18,3 +18,8 @@ function ansible:deploy {
   ansible-playbook -vvv provision.yml
 }
 
+# main
+case $1 in
+    ansible:build) "$@"; exit;;
+    ansible:deploy) "$@"; exit;;
+esac
