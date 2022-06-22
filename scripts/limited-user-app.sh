@@ -5,7 +5,7 @@ set -e
 #<UDF name="sudo_username" label="The limited sudo user to be created on the Linode" />
 
 # git repo
-export GIT_REPO=""
+export GIT_REPO="https://github.com/josephcardillo/ansible_limited_user_test.git"
 
 # enable logging
 exec > >(tee /dev/ttyS0 /var/log/stackscript.log) 2>&1
