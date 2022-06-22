@@ -1,0 +1,20 @@
+---
+- name: Create limited sudo user
+  vars:
+    newpassword: n3wP@s$w0rd!
+
+  tasks:
+  - name: Create user
+    user:
+      name: "{{ sudo_username }}"
+      home: "/home/'{{ sudo_username }}'"
+      shell: /bin/bash
+
+  - name: Change password
+    user:
+      name: "{{ sudo_username }}"
+      update_password: always
+      password: "{{ newpassword | password_hash('sha512') }}"
+
+  - name: Add user to sudo group
+    shell: "adduser '{{ sudo_user }}' sudo"
