@@ -24,12 +24,12 @@ function setup {
   # clone repo and set up ansible environment
   git clone ${GIT_REPO} /tmp/sudo-user
   cd /tmp/sudo-user
-  # pip3 install virtualenv
-  # python3 -m virtualenv env
-  # source env/bin/activate
-  # pip install pip --upgrade
-  # pip install -r requirements.txt
-  # ansible-galaxy install -r collections.yml
+  pip3 install virtualenv
+  python3 -m virtualenv env
+  source env/bin/activate
+  pip install pip --upgrade
+  pip install -r requirements.txt
+  ansible-galaxy install -r collections.yml
   # copy run script to path
   cp scripts/run.sh /usr/local/bin/run
   chmod +x /usr/local/bin/run
