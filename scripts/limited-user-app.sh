@@ -29,7 +29,7 @@ function setup {
   source env/bin/activate
   pip install pip --upgrade
   pip install -r requirements.txt
-  ansible-galaxy install -r collections.yml
+  # ansible-galaxy install -r collections.yml
   # copy run script to path
   cp scripts/run.sh /usr/local/bin/run
   chmod +x /usr/local/bin/run
