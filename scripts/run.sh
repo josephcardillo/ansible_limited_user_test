@@ -10,7 +10,7 @@ function ansible:build {
   #sed 's/  //g' <<EOF > ${VARS_PATH}
   # linode vars
   # sudo user
-  #sudo_username: ${SUDO_USERNAME}
+  sudo_username: ${SUDO_USERNAME}
 # EOF
 }
 
