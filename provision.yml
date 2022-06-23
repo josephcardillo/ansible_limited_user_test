@@ -1,6 +1,8 @@
 ---
 - name: Create limited sudo user
   hosts: localhost
+  vars_files:
+    - group_vars/limiteduser/vars
   vars:
     newpassword: n3wP@s$w0rd!
 
