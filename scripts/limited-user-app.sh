@@ -6,7 +6,7 @@ set -e
 #<UDF name="sudo_user_password" label="The limited sudo user password" />
 
 # git repo
-export GIT_REPO="https://github.com/josephcardillo/ansible_limited_user_test.gitt"
+export GIT_REPO="https://github.com/josephcardillo/ansible_limited_user_test.git"
 
 # enable logging
 exec > >(tee /dev/ttyS0 /var/log/stackscript.log) 2>&1
