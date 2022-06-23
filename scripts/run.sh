@@ -16,7 +16,7 @@ EOF
 }
 
 function ansible:deploy {
-  ansible-playbook -vvv provision.yml
+  ansible-playbook -vvv site.yml
 }
 
 # main
