@@ -2,16 +2,16 @@
 set -e
 
 # constants
-# readonly VARS_PATH="./group_vars/limiteduser/vars"
+readonly VARS_PATH="./group_vars/limiteduser/vars"
 
 function ansible:build {
   # ssh_key
   # write vars file
-  #sed 's/  //g' <<EOF > ${VARS_PATH}
+  sed 's/  //g' <<EOF > ${VARS_PATH}
   # linode vars
   # sudo user
   sudo_username: ${SUDO_USERNAME}
-# EOF
+EOF
 }
 
 function ansible:deploy {
