@@ -12,7 +12,6 @@ function ansible:build {
   # linode vars
   # sudo user
   sudo_username: ${SUDO_USERNAME}
-  sudo_user_pw: ${SUDO_USER_PW}
 EOF
 }
 
