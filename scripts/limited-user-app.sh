@@ -6,7 +6,7 @@ set -e
 #<UDF name="sudo_user_password" label="The limited sudo user password" />
 
 # git repo
-export GIT_REPO="https://github.com/josephcardillo/ansible_limited_user_test.git"
+export GIT_REPO="https://github.com/josephcardillo/ansible_limited_user_test.gitt"
 
 # enable logging
 exec > >(tee /dev/ttyS0 /var/log/stackscript.log) 2>&1
@@ -23,7 +23,7 @@ function setup {
   #  curl -sH "Content-Type: application/json" -H "Authorization: Bearer ${TOKEN_PASSWORD}" https://api.linode.com/v4/profile/sshkeys | jq -r .data[].ssh_key > /root/.ssh/authorized_keys
   #fi
   # clone repo and set up ansible environment
-  git clone ${GIT_REPO} /tmp/sudo-user
+  git clone ${GIT_REPO} /tmp/sudo-user || echo "[FATAL] unable to pull repo" && exit 1
   cd /tmp/sudo-user
   pip3 install virtualenv
   python3 -m virtualenv env
