@@ -22,7 +22,7 @@
     owner: "{{ sudo_username }}"
     group: "{{ sudo_username }}"
     mode: 0600
-    state: present
+    #state: present
 
 #- name: Add user to sudo group
   #shell: "adduser {{ sudo_username }} sudo"
