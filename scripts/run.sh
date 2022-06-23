@@ -7,12 +7,11 @@ readonly VARS_PATH="./group_vars/limiteduser/vars"
 function ansible:build {
   # ssh_key
   # write vars file
-  mkdir -p ./group_vars/limiteduser
   sed 's/  //g' <<EOF > ${VARS_PATH}
   # linode vars
   # sudo user
   sudo_username: ${SUDO_USERNAME}
-  sudo_user_pw: ${SUDO_USER_PW}
+  sudo_user_password: ${SUDO_USER_PASSWORD}
 EOF
 }
 
