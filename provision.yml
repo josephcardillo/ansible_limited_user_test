@@ -20,4 +20,4 @@
       password: "{{ newpassword | password_hash('sha512') }}"
 
   - name: Add user to sudo group
-    shell: "adduser '{{ sudo_user }}' sudo"
+    shell: "adduser {{ sudo_user }} sudo"
